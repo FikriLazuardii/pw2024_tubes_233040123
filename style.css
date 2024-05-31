@@ -1,0 +1,650 @@
+:root {
+  /* color */
+  --primary: #0a7a40;
+  --secondary: #feed01;
+  --third: #000;
+  --bg: #fff;
+}
+
+* {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #0D1C34;
+  color: #fff;
+}
+
+body p {
+  color: var(--bg);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 7%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgb(0, 64, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--secondary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #feed01;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  border: 1px solid var(--third);
+  width: 35rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--third);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--third);
+}
+/* Navbar End */
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown button {
+  cursor: pointer;
+}
+
+.dropdown a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: #666;
+  min-width: 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown:hover button {
+  background-color: #fff;
+}
+
+.dropdown a:hover {
+  background-color: #666;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(assets/img/hero1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* .hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 25%);
+} */
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1;
+}
+
+.hero .content h1 span {
+  color: var(--secondary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.hero .content .cta:hover {
+  transform: scale(1.05);
+}
+/* Hero End */
+
+/* About */
+.about,
+.menu,
+.products,
+.location,
+.contact {
+  padding: 5rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.products h2,
+.location h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about h2 span,
+.menu h2 span,
+.products h2 span,
+.location h2 span,
+.contact h2 span {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 80%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--bg);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--bg);
+}
+/* About End */
+
+
+/* Products */
+.pembungkus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 50px 20px;
+}
+
+.container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background-color: #666;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.container .card .img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  height: 400px;
+}
+
+.container .card:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .card .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  top: 130px;
+  height: 250px;
+}
+
+.container .card .content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: aqua;
+}
+
+.container .card .content .kata-inspirasi {
+  color: #fff;
+  margin-top: -30px;
+}
+
+.container .card .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 15px;
+  background-color: aqua;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.container .card .content a:hover {
+  opacity: 0.8;
+}
+/* Products End */
+
+/* Contact */
+.contact {
+  margin-bottom: 100px;
+}
+
+.contact .contact-form {
+  position: relative;
+  z-index: 0;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+  margin-top: -25px;
+}
+
+.contact .contact-form .container {
+  max-width: 800px;
+  margin-top: -3px;
+}
+
+.contact .contact-form .content h2 {
+  line-height: 40px;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-align: center;
+}
+
+.contact .contact-form .main {
+  position: relative;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.contact .contact-form .content {
+  flex-basis: 50%;
+  padding: 3em 3em;
+  background: #fff;
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 1);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.contact .form-img {
+  flex-basis: 50%;
+  background: var(--primary);
+  background-size: cover;
+  padding: 40px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+}
+
+.contact .form-img img {
+  max-width: 100%;
+}
+
+.contact .btn,
+button,
+input {
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.contact .btn:hover,
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.contact .contact-form form {
+  margin: 30px 0;
+}
+
+.contact .contact-form input,
+textarea {
+  outline: none;
+  margin-bottom: 1rem;
+  font-stretch: 1rem;
+  color: #999;
+  padding: 14px 20px;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  background: #fcfcfc;
+  transition: 0.3s ease;
+}
+
+.contact .contact-form input:focus {
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+
+.contact .contact-form button {
+  font-size: 1.2rem;
+  color: #fff;
+  width: 100%;
+  background: var(--primary);
+  font-weight: 700;
+  transition: 0.3s ease;
+  padding: 14px 15px;
+}
+/* Contact End */
+
+/* Footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  background-color: var(--primary);
+  padding: 60px 10%;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+}
+
+.footer-col h4 {
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background-color: var(--primary);
+  height: 2px;
+  width: 40px;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+ul li a {
+  display: block;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+ul li a .icon {
+  color: #fff;
+  width: 20px;
+}
+
+ul li a:hover {
+  color: #fff;
+  padding-left: 2px;
+}
+
+.links {
+  margin-left: -10px;
+}
+
+.links a {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  color: #fff;
+  background-color: var(--primary);
+  margin: 0 8px 8px 0;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.links a:hover {
+  color: var(--secondary);
+  background-color: var(--third);
+}
+
+.links a .social-media {
+  margin-top: 10px;
+}
+/* Footer End */
+
+/* Modal Box */
+/* Item Detai */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal .modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  height: 20rem;
+  animation: animateModal 0.5s;
+}
+
+/* Modal Animasi */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal .modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal .modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal .modal-content img {
+  height: 15rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal .modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+  text-align: justify;
+}
+
+.modal .modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+}

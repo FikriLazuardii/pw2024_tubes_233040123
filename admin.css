@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 40px;
+    font-family: "Kanit", sans-serif;
+}
+
+.table-admin {
+    border: 2px solid #0D1C34;
+    padding: 15px;
+    overflow: auto;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    font-size: 14px;
+    color: #444;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+
+table>thead {
+    background-color: #0D1C34;
+    color: whitesmoke;
+}
+
+table>thead th {
+    padding: 15px;
+}
+
+table th, table td {
+    border: 1px solid #0D1C34;
+    padding: 30px;
+}
+
+table>tbody>tr>td>img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 2px 6px #0003;
+    align-items: center;
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.action-btn>a {
+    text-decoration: none;
+    color: #444;
+    background: whitesmoke;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 7px 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.action-btn>a:nth-child(1) {
+    border-color: rgb(64, 207, 64);
+    color: black;
+}
+
+.action-btn>a:nth-child(2) {
+    border-color: rgb(200, 68, 68);
+    color: black;
+}
+
+.action-btn>a:hover {
+    box-shadow: 0 4px 10px #0003;
+}
+
+table>tbody>tr {
+    background-color: whitesmoke;
+    transition: 0.3s ease-in-out;
+}
+
+table>tbody>tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+table>tbody>tr:hover {
+    filter: drop-shadow(0 2px 6px #0002);
+}
+
