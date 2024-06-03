@@ -54,7 +54,7 @@ body p {
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--secondary);
+  color: aqua;
 }
 
 .navbar .navbar-nav a::after {
@@ -76,7 +76,7 @@ body p {
 }
 
 .navbar .navbar-extra a:hover {
-  color: #feed01;
+  color: aqua;
 }
 
 #hamburger-menu {
@@ -153,7 +153,7 @@ body p {
 }
 
 .hero .content h1 span {
-  color: var(--secondary);
+  color: white;
 }
 
 .hero .content p {
@@ -414,115 +414,111 @@ body p {
 }
 /* Card */
 
-/* Contact */
-.contact {
-  margin-bottom: 100px;
-}
-
-.contact .contact-form {
+/* Banner */
+.banner {
+  background-image: url('assets/img/aboutlogo.jpg'); /* Ensure the image is in the same directory or update the path */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
   position: relative;
-  z-index: 0;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  display: grid;
   align-items: center;
-  margin-top: -25px;
-}
-
-.contact .contact-form .container {
-  max-width: 800px;
-  margin-top: -3px;
-}
-
-.contact .contact-form .content h2 {
-  line-height: 40px;
-  margin-bottom: 5px;
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--primary);
   text-align: center;
 }
 
-.contact .contact-form .main {
-  position: relative;
-  display: flex;
-  margin: 2rem 0;
+.banner h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 0 20px;
 }
 
-.contact .contact-form .content {
-  flex-basis: 50%;
-  padding: 3em 3em;
-  background: #fff;
-  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 1);
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+.button {
+  background-color: #6FCF97; /* Button color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
 }
 
-.contact .form-img {
-  flex-basis: 50%;
-  background: var(--primary);
-  background-size: cover;
-  padding: 40px;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  align-items: center;
-  display: grid;
-  justify-content: center;
+.button:hover {
+  background-color: #57B77D; /* Darker button color on hover */
 }
-
-.contact .form-img img {
-  max-width: 100%;
-}
-
-.contact .btn,
-button,
-input {
-  border-radius: 2rem;
-  transition: 0.3s;
-}
-
-.contact .btn:hover,
-button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-.contact .contact-form form {
-  margin: 30px 0;
-}
-
-.contact .contact-form input,
-textarea {
-  outline: none;
-  margin-bottom: 1rem;
-  font-stretch: 1rem;
-  color: #999;
-  padding: 14px 20px;
-  width: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  border: none;
-  background: #fcfcfc;
-  transition: 0.3s ease;
-}
-
-.contact .contact-form input:focus {
-  background: transparent;
-  border: 1px solid var(--primary);
-}
-
-.contact .contact-form button {
-  font-size: 1.2rem;
-  color: #fff;
-  width: 100%;
-  background: var(--primary);
-  font-weight: 700;
-  transition: 0.3s ease;
-  padding: 14px 15px;
-}
-/* Contact End */
 
 /* Footer */
+footer {
+  background-color: #0c1525;
+  color: white;
+  padding: 50px 0;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.logo {
+  width: 200px;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right p {
+  font-size: 1.2em;
+  color: #c7d800;
+  margin-bottom: 10px;
+}
+
+.footer-right select {
+  padding: 5px;
+  font-size: 1em;
+}
+
+.footer-right nav {
+  margin-top: 10px;
+}
+
+.footer-right nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-right nav a:hover {
+  text-decoration: underline;
+}
 /* Footer End */
 
 /* Modal Box */

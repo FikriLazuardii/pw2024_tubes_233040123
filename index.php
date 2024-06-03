@@ -88,7 +88,7 @@ if( isset($_POST["cari"]) ) {
 
       <div class="row">
         <div class="about-img">
-          <img src="img/Bali.jpg" alt="Tentang Kami" />
+          <img src="assets/img/aboutlogo.jpg" alt="Tentang Kami" />
         </div>
         <div class="content">
           <h3>TOURISM INDONESIA</h3>
@@ -138,8 +138,41 @@ if( isset($_POST["cari"]) ) {
       </section>
     <!-- Products End -->
 
+    <!-- Banner -->
+    <div class="banner">
+        <div class="overlay">
+            <h1>Telusuri 5 Pesona Wisata di Indonesia</h1>
+            <a href="#" class="button">Info Selengkapnya</a>
+        </div>
+    </div>
+
     <!-- Footer -->
-    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="assets/img/logotourism.png" alt="Wonderful Indonesia Logo" class="logo">
+                <div class="social-media">
+                    <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="youtube_icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="tiktok_icon.png" alt="TikTok"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Kunjungi situs lainnya</p>
+                <select>
+                    <option>Pilih Situs</option>
+                </select>
+                <nav>
+                    <a href="#">Kebijakan Cookie</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat dan Ketentuan</a>
+                    <a href="#">Hubungi Kami</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
     <!-- Footer End -->
 
     <!-- feather icon -->

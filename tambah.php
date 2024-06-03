@@ -35,27 +35,29 @@ if( isset($_POST["submit"]) ) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Destinasi</title>
+
+    <link rel="stylesheet" href="tambah.css">
+
 </head>
 <body>
     
-    <h1>Tambah Destinasi</h1>
-
     <form action="" method="post" enctype="multipart/form-data">
+        <h1>Tambah Destinasi</h1>
         <ul>
             <li>
                 <label for="judul">Judul :</label>
-                <input type="text" name="judul" id="judul">
+                <input class="input-text" type="text" name="judul" id="judul">
             </li>
             <li>
                 <label for="konten">Konten :</label>
-                <input type="text" name="konten" id="konten">
+                <input class="input-text" type="text" name="konten" id="konten">
             </li>
             <li>
                 <label for="gambar">Gambar :</label>
-                <input type="file" name="gambar" id="gambar">
+                <input class="input-file" type="file" name="gambar" id="gambar">
             </li>
             <li>
-                <button type="submit" name="submit">Tambah Data!</button>
+                <button class="input-submit" type="submit" name="submit">Tambah Data!</button>
             </li>
         </ul>
 

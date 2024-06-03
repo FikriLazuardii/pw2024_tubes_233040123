@@ -40,29 +40,32 @@ if( isset($_POST["submit"]) ) {
 <html lang="en">
 <head>
     <title>Ubah data Destinasi</title>
+
+    <link rel="stylesheet" href="ubah.css">
+
 </head>
 <body>
-    <h1>Ubah data Destinasi</h1>
 
     <form action="" method="post" enctype="multipart/form-data">
+    <h1>Ubah data Destinasi</h1>
         <input type="hidden" name="id_inspirasi" value="<?= $ins["id_inspirasi"] ?>">
         <input type="hidden" name="gambarLama" value="<?= $ins["gambar"] ?>">
         <ul>
             <li>
                 <label for="judul">Judul: </label>
-                <input type="text" name="judul" id="judul" requied value="<?= $ins["judul"] ?>">
+                <input class="input-text" type="text" name="judul" id="judul" requied value="<?= $ins["judul"] ?>">
             </li>
             <li>
                 <label for="konten">Konten: </label>
-                <input type="text" name="konten" id="konten" required value="<?= $ins["konten"] ?>">
+                <input class="input-text" type="text" name="konten" id="konten" required value="<?= $ins["konten"] ?>">
             </li>
             <li>
                 <label for="gambar">Gambar: </label> <br>
-                <img src="img/<?= $ins['gambar']; ?>" width="40" alt=""> <br>
-                <input type="file" name="gambar" id="gambar">
+                <img class="image-preview" src="img/<?= $ins['gambar']; ?>" width="40" alt=""> <br>
+                <input class="input-file" type="file" name="gambar" id="gambar">
             </li>
             <li>
-                <button type="submit" name="submit">Ubah Data</button>
+                <button class="input-submit" type="submit" name="submit">Ubah Data</button>
             </li>
         </ul>
     </form>
