@@ -112,49 +112,13 @@ body p {
   padding: 1rem;
 }
 
-.navbar .search-form label {
+.navbar .search-form button i {
   cursor: pointer;
   font-size: 2rem;
   margin-right: 1.5rem;
   color: var(--third);
 }
 /* Navbar End */
-
-/* Dropdown */
-.dropdown {
-  display: inline-block;
-}
-
-.dropdown button {
-  cursor: pointer;
-}
-
-.dropdown a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.dropdown .content {
-  display: none;
-  position: absolute;
-  background-color: #666;
-  min-width: 100px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.dropdown:hover .content {
-  display: block;
-}
-
-.dropdown:hover button {
-  background-color: #fff;
-}
-
-.dropdown a:hover {
-  background-color: #666;
-}
 
 /* Hero Section */
 .hero {
@@ -232,7 +196,7 @@ body p {
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -251,7 +215,7 @@ body p {
 }
 
 .about .row .about-img {
-  flex: 1 1 45rem;
+  flex: 1 1 25rem;
 }
 
 .about .row .about-img img {
@@ -264,7 +228,7 @@ body p {
 }
 
 .about .row .content h3 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: var(--bg);
 }
@@ -279,8 +243,70 @@ body p {
 }
 /* About End */
 
+/* Langganan */
+.subscription-form {
+  background-image: url('/assets/img/DanauToba.avif');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 80px;
+}
 
-/* Products */
+.content-langganan {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.content-langganan h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.content-langganan form {
+  display: flex;
+  justify-content: center;
+}
+
+.content-langganan input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.content-langganan button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #374a67;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-langganan button:hover {
+  background-color: #2b3b53;
+}
+
+.content-langganan .error-message {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Card */
 .pembungkus {
   display: flex;
   flex-direction: row;
@@ -294,7 +320,10 @@ body p {
   display: flex;
   flex-wrap: wrap;
   gap: 100px 50px;
-  padding: 50px 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 
 .container .card {
@@ -356,7 +385,8 @@ body p {
   height: 250px;
 }
 
-.container .card .content h2 {
+.container .card .content .judul-destinasi {
+  margin-bottom: 2.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: aqua;
@@ -382,7 +412,7 @@ body p {
 .container .card .content a:hover {
   opacity: 0.8;
 }
-/* Products End */
+/* Card */
 
 /* Contact */
 .contact {
@@ -492,89 +522,7 @@ textarea {
 /* Contact End */
 
 /* Footer */
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: auto;
-  background-color: var(--primary);
-  padding: 60px 10%;
-}
 
-ul {
-  list-style: none;
-}
-
-.footer-col {
-  width: 25%;
-}
-
-.footer-col h4 {
-  position: relative;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 1.3rem;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  background-color: var(--primary);
-  height: 2px;
-  width: 40px;
-}
-
-ul li:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-ul li a {
-  display: block;
-  font-size: 1.1rem;
-  text-transform: capitalize;
-  color: var(--secondary);
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-ul li a .icon {
-  color: #fff;
-  width: 20px;
-}
-
-ul li a:hover {
-  color: #fff;
-  padding-left: 2px;
-}
-
-.links {
-  margin-left: -10px;
-}
-
-.links a {
-  display: inline-block;
-  height: 44px;
-  width: 44px;
-  color: #fff;
-  background-color: var(--primary);
-  margin: 0 8px 8px 0;
-  text-align: center;
-  line-height: 44px;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-.links a:hover {
-  color: var(--secondary);
-  background-color: var(--third);
-}
-
-.links a .social-media {
-  margin-top: 10px;
-}
 /* Footer End */
 
 /* Modal Box */

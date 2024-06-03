@@ -16,13 +16,6 @@ document.querySelector("#search-button").onclick = (e) => {
   e.preventDefault();
 };
 
-// Toggle class active shopping cart
-const shoppingCart = document.querySelector(".shopping-cart");
-document.querySelector("#shopping-cart-button").onclick = (e) => {
-  shoppingCart.classList.toggle("active");
-  e.preventDefault();
-};
-
 // klik diluar Elemen
 const hm = document.querySelector("#hamburger-menu");
 const sb = document.querySelector("#search-button");
@@ -39,23 +32,6 @@ document.addEventListener("click", function (e) {
     shoppingCart.classList.remove("active");
   }
 });
-
-// Modal Box
-const itemDetailModal = document.querySelector("#item-detail-modal");
-const itemDetailButtons = document.querySelectorAll(".item-detail-button");
-
-itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = "flex";
-    e.preventDefault();
-  };
-});
-
-// klik tombol close
-document.querySelector(".modal .close-icon").onclick = (e) => {
-  itemDetailModal.style.display = "none";
-  e.preventDefault();
-};
 
 // klik diluar modal
 

@@ -48,6 +48,8 @@ if( isset($_POST["cari"]) ) {
       <div class="navbar-nav">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT US</a>
+        <a href="#products">DESTINATION</a>
+        <a href="profile.php">PROFILE</a>
         <a href="admin.php">ADMIN</a>
       </div>
 
@@ -59,10 +61,10 @@ if( isset($_POST["cari"]) ) {
       </div>
 
       <!-- Search Form -->
-      <div class="search-form" action="" method="post">
-        <input type="text" name="keyword" id="search-box" autofocus="" placeholder="search here..." autocomplete="off" />
-        <label type="submit" name="cari" for="search-box"><i data-feather="search"></i></label>
-      </div>
+      <form class="search-form" action="" method="post">
+        <input type="text" name="keyword" size="40" autofocus="" placeholder="masukan keyword pencarian" autocomplete="off">
+        <button type="submit" name="cari"><i data-feather="search"></i></button>
+      </form>
       <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
@@ -91,13 +93,27 @@ if( isset($_POST["cari"]) ) {
         <div class="content">
           <h3>TOURISM INDONESIA</h3>
           <p>
-            5 HAYAM! adalah salah satu brand kuliner dengan sistem usaha kemitraan yang berdiri sejak tahun 2022 yang bernaung
+            Tourism Indonesia merupakan salah satu startup pariwisata yang memberikan fasilitas pemesanan atau booking hotel secara real time.
           </p>
-          <p>Dalam mencapai tujuan tersebut, kami didukung oleh sumber daya yang profesional, dan juga berkualitas. Hal ini guna menjaga kepuasan para mitra kami yang sudah mempercayakan perusahaan kami, dalam membantu usahanya.</p>
+          <p>
+            Selain itu, informasi mengenai lokasi wisata juga dikemas secara modern dan lengkap. Tourism Indonesia telah bekerja sama dengan banyak akomodasi dan agen perjalanan wisata.
+          </p>
         </div>
       </div>
     </section>
     <!-- About Section End -->
+
+    <!-- Langganan -->
+    <div class="subscription-form">
+        <div class="content-langganan">
+            <h1>Dapatkan E-Book Travel Gratis dengan Berlangganan</h1>
+            <form>
+                <input type="email" placeholder="Enter your email address ..." required>
+                <button type="submit">BERLANGGANAN</button>
+            </form>
+            <p class="error-message">This field is required.</p>
+        </div>
+    </div>
 
     <!-- Products Section -->
     <section class="products" id="products">
@@ -110,49 +126,21 @@ if( isset($_POST["cari"]) ) {
             <img src="img/<?= $row["gambar"]; ?>" alt="">
           </div>
           <div class="content">
-           <h2><?php echo $row["judul"]?></h2>
+           <h2 class="judul-destinasi"><?php echo $row["judul"]?></h2>
             <p class="kata-inspirasi"><?php echo $row["konten"]?></p>
              <a href="">Read More</a>
            </div>
         </div>
        </div>
-    <?php endforeach; ?>
+      <?php endforeach; ?>
       </div>
     
       </section>
     <!-- Products End -->
 
-    <!-- Contact Section -->
-   
-    <!-- Contact End -->
-
     <!-- Footer -->
     
     <!-- Footer End -->
-
-    <!-- Modal Box Detail Start -->
-    <div class="modal" id="item-detail-modal">
-      <div class="modal-container">
-        <a href="#" class="close-icon"><i data-feather="x"></i></a>
-        <div class="modal-content">
-          <img src="assets/img/product/product1.png" alt="Product 1" />
-          <div class="product-content">
-            <h3>Product 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit tenetur facere ducimus cupiditate vel aliquam velit vero, doloremque eum earum.</p>
-            <div class="product-stars">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-            <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Box End -->
 
     <!-- feather icon -->
     <script>
