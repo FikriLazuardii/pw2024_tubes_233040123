@@ -115,7 +115,7 @@ if( isset($_POST["cari"]) ) {
         </div>
     </div>
 
-    <!-- Products Section -->
+    <!-- Destination Section -->
     <section class="products" id="products">
       <h2><span>DESTINASI</span> PILIHAN</h2>
       <div class="pembungkus">
@@ -136,7 +136,7 @@ if( isset($_POST["cari"]) ) {
       </div>
     
       </section>
-    <!-- Products End -->
+    <!-- Destination End -->
 
     <!-- Banner -->
     <div class="banner">

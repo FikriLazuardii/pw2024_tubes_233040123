@@ -121,16 +121,6 @@ table>tbody>tr:hover {
 }
 
 /* Search */
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .search-container form {
     display: flex;
 }
@@ -143,6 +133,7 @@ table>tbody>tr:hover {
     outline: none;
     width: 250px;
     transition: width 0.4s ease-in-out;
+    background-color: aqua;
 }
 
 .search-input:focus {

@@ -30,12 +30,11 @@ if( isset($_POST["cari"]) ) {
 <button class="cool-button"><a href="tambah.php">Tambah Destinasi</a></button>
 <br><br>
 
-<div class="search-container">
+
     <form action="" method="post">
         <input class="search-input" type="text" name="keyword" size="40" autofocus="" placeholder="masukan keyword pencarian" autocomplete="off">
         <button class="search-button" type="submit" name="cari">Cari!</button>
     </form>
-</div>
 <br>
 
 <div class="table-admin">
