@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="css/profile.css">
 
 </head>
 <body>
@@ -12,7 +12,7 @@
 
 <div class="wrapper">
     <div class="left">
-        <img src="assets/img/profile.jpg" alt="user" width="100">
+        <img src="imageasset/profile.jpg" alt="user" width="100">
         <h4>Fikri Lazuardi</h4>
          <p>UI Developer</p>
     </div>

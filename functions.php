@@ -153,8 +153,12 @@ function registrasi($data) {
     // enkripsi password
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    // tambah user baru ke database
-    mysqli_query($koneksi, "INSERT INTO user VALUES('0', '$username', '$email', '$password')");
+     // set role user
+     $role = 'user'; // default role adalah user
+
+     // tambah user baru ke database
+     $query = "INSERT INTO user (username, email, password, role) VALUES('$username', '$email', '$password', '$role')";
+     mysqli_query($koneksi, $query);
 
     return mysqli_affected_rows($koneksi);
 

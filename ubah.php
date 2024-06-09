@@ -41,7 +41,7 @@ if( isset($_POST["submit"]) ) {
 <head>
     <title>Ubah data Destinasi</title>
 
-    <link rel="stylesheet" href="ubah.css">
+    <link rel="stylesheet" href="css/ubah.css">
 
 </head>
 <body>

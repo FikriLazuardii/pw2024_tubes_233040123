@@ -5,10 +5,12 @@ require 'functions.php';
 if( isset($_POST["register"]) ) {
     if( registrasi($_POST) > 0 ) {
         echo "<script>
-        alert('user baru berhasil ditambahkan!')
+        alert('User baru berhasil ditambahkan!')
         </script>";
     } else {
-        echo mysqli_error($koneksi);
+        echo "<script>
+        alert('Gagal menambahkan user baru!')
+        </script>";
     }
     
     } 
@@ -23,7 +25,7 @@ if( isset($_POST["register"]) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi</title>
 
-    <link rel="stylesheet" href="registrasi.css">
+    <link rel="stylesheet" href="css/registrasi.css">
 
     <!-- link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

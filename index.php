@@ -29,7 +29,7 @@ if( isset($_POST["cari"]) ) {
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;700&family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" />
 
     <!-- my style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- box icon -->
@@ -43,21 +43,42 @@ if( isset($_POST["cari"]) ) {
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="#" class="navbar-logo"><img src="assets/img/logotrip.png" alt="" /></a>
+      <a href="#" class="navbar-logo"><img src="imageasset/logotrip.png" alt="" /></a>
 
       <div class="navbar-nav">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT US</a>
         <a href="#products">DESTINATION</a>
-        <a href="profile.php">PROFILE</a>
-        <a href="admin.php">ADMIN</a>
       </div>
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i> </a>
-        <a href="login.php" id="user-button"><i data-feather="user"></i> </a>
-        <a href="logout.php"><i data-feather="log-out"></i> </a>
+        <a href="#" id="user-button" onclick="toggleMenu()"><i data-feather="user"></i> </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i> </a>
+      </div>
+
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img class="dropdown-img" src="imageasset/profile.jpg" alt="">
+            <h2>Fikri Lazuardi</h2>
+          </div>
+          <hr>
+
+          <a href="profile.php" class="sub-menu-link">
+            <img src="imageasset/profile.jpg">
+            <p>Edit Profile</p>
+          </a>
+          <a href="admin.php" class="sub-menu-link">
+            <img src="imageasset/profile.jpg">
+            <p>Halaman Admin</p>
+          </a>
+          <a href="logout.php" class="sub-menu-link">
+            <img src="imageasset/profile.jpg">
+            <p>Logout</p>
+          </a>
+
+        </div>
       </div>
 
       <!-- Search Form -->
@@ -88,7 +109,7 @@ if( isset($_POST["cari"]) ) {
 
       <div class="row">
         <div class="about-img">
-          <img src="assets/img/aboutlogo.jpg" alt="Tentang Kami" />
+          <img src="imageasset/aboutlogo.jpg" alt="Tentang Kami" />
         </div>
         <div class="content">
           <h3>TOURISM INDONESIA</h3>
@@ -134,8 +155,7 @@ if( isset($_POST["cari"]) ) {
        </div>
       <?php endforeach; ?>
       </div>
-    
-      </section>
+    </section>
     <!-- Destination End -->
 
     <!-- Banner -->
@@ -182,5 +202,14 @@ if( isset($_POST["cari"]) ) {
 
     <!-- my java -->
     <script src="js/script.js"></script>
+
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu(){
+        subMenu.classList.toggle("open-menu")
+      }
+
+    </script>
   </body>
 </html>

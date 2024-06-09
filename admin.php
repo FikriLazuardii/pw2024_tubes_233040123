@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
+if ($_SESSION['role'] != 'admin') {
+    header("Location: login.php");
+    exit;
+}
+
 require 'functions.php';
 $inspirasi = query("SELECT * FROM inspirasi");
 
@@ -15,7 +27,7 @@ if( isset($_POST["cari"]) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
 
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
 
     <!-- link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +39,8 @@ if( isset($_POST["cari"]) ) {
     
 <h1>Tambah Destinasi</h1>
 
-<button class="cool-button"><a href="tambah.php">Tambah Destinasi</a></button>
+<a href="index.php"><button class="cool-button">Halaman Utama</button></a>
+<a href="tambah.php"><button class="cool-button">Tambah Destinasi</button></a>
 <br><br>
 
 

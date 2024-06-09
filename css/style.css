@@ -87,27 +87,27 @@ body p {
 .navbar .search-form {
   position: absolute;
   top: 100%;
-  right: 7%;
+  right: 10%;
   background-color: #fff;
   border: 1px solid var(--third);
-  width: 35rem;
-  height: 4rem;
+  width: 25rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   transform: scaleY(0);
   transform-origin: top;
   transition: 0.3s;
-  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .navbar .search-form.active {
   transform: scaleY(1);
+  margin-top: 10px;
 }
 
 .navbar .search-form input {
   height: 100%;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--third);
   padding: 1rem;
 }
@@ -118,6 +118,84 @@ body p {
   margin-right: 1.5rem;
   color: var(--third);
 }
+
+/* Dropdown */
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h2 {
+  font-weight: 500;
+  color: #000;
+}
+
+.user-info .dropdown-img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 12px 0;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  color: #000;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
 /* Navbar End */
 
 /* Hero Section */
@@ -125,7 +203,7 @@ body p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(assets/img/hero1.png);
+  background-image: url('imageasset/hero1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -245,7 +323,7 @@ body p {
 
 /* Langganan */
 .subscription-form {
-  background-image: url('assets/img/DanauToba.avif');
+  background-image: url('imageasset/DanauToba.avif');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -418,7 +496,7 @@ body p {
 /* Banner */
 .banner {
   position: relative;
-  background-image: url('assets/img/aboutlogo.jpg'); /* Make sure the image is in the same directory or provide the correct path */
+  background-image: url('imageasset/aboutlogo.jpg'); /* Make sure the image is in the same directory or provide the correct path */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -428,8 +506,9 @@ body p {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 80px;
+  margin-bottom: 70px;
 }
 
 .overlay {
@@ -447,10 +526,9 @@ body p {
   color: white;
 }
 
-h1 {
+.banner h1 {
   font-size: 2.5em;
   margin: 0;
-  padding: 0 20px;
 }
 
 .button {
@@ -533,75 +611,3 @@ footer {
   text-decoration: underline;
 }
 /* Footer End */
-
-/* Modal Box */
-/* Item Detai */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal .modal-container {
-  position: relative;
-  background-color: #fefefe;
-  color: var(--bg);
-  margin: 15% auto;
-  padding: 1.2rem;
-  border: 1px solid #666;
-  width: 80%;
-  height: 20rem;
-  animation: animateModal 0.5s;
-}
-
-/* Modal Animasi */
-@keyframes animateModal {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.modal .modal-container .close-icon {
-  position: absolute;
-  right: 1rem;
-}
-
-.modal .modal-content {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.modal .modal-content img {
-  height: 15rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-}
-
-.modal .modal-content p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  margin-top: 1.2rem;
-  text-align: justify;
-}
-
-.modal .modal-content a {
-  display: flex;
-  gap: 1rem;
-  width: 12rem;
-  background-color: var(--primary);
-  color: #fff;
-  margin-top: 1rem;
-  padding: 1rem 1.6rem;
-}
