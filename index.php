@@ -60,21 +60,21 @@ if( isset($_POST["cari"]) ) {
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
           <div class="user-info">
-            <img class="dropdown-img" src="imageasset/profile.jpg" alt="">
+            <img class="dropdown-img" src="imageasset/user.png" alt="">
             <h2>Fikri Lazuardi</h2>
           </div>
           <hr>
 
           <a href="profile.php" class="sub-menu-link">
-            <img src="imageasset/profile.jpg">
+            <img src="imageasset/user.png">
             <p>Edit Profile</p>
           </a>
           <a href="admin.php" class="sub-menu-link">
-            <img src="imageasset/profile.jpg">
+            <img src="imageasset/setting.png">
             <p>Halaman Admin</p>
           </a>
           <a href="logout.php" class="sub-menu-link">
-            <img src="imageasset/profile.jpg">
+            <img src="imageasset/logout.png">
             <p>Logout</p>
           </a>
 
@@ -170,7 +170,7 @@ if( isset($_POST["cari"]) ) {
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <img src="assets/img/logotourism.png" alt="Wonderful Indonesia Logo" class="logo">
+                <img src="imageasset/logotourism.png" alt="Wonderful Indonesia Logo" class="logo">
                 <div class="social-media">
                     <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
                     <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>

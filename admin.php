@@ -12,7 +12,16 @@ if ($_SESSION['role'] != 'admin') {
 }
 
 require 'functions.php';
-$inspirasi = query("SELECT * FROM inspirasi");
+
+// Pagnination
+// Konfigurasi
+$jumlahDataPerHalaman = 2;
+$jumlahData = count(query("SELECT * FROM inspirasi"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$page = ( isset($_GET["page"]) ) ? $_GET["page"] : 1;
+$awalData = ( $jumlahDataPerHalaman * $page ) - $jumlahDataPerHalaman;
+
+$inspirasi = query("SELECT * FROM inspirasi LIMIT $awalData, $jumlahDataPerHalaman");
 
 // tombol cari ditekan
 if( isset($_POST["cari"]) ) {
@@ -49,6 +58,24 @@ if( isset($_POST["cari"]) ) {
         <button class="search-button" type="submit" name="cari">Cari!</button>
     </form>
 <br>
+
+<!-- navigasi -->
+
+<?php if( $page > 1 ) : ?>
+<a href="?page=<?= $page - 1?>">&laquo;</a>
+<?php endif; ?>
+
+ <?php for($i = 1; $i <= $jumlahHalaman; $i++ ) : ?>
+    <?php if( $i == $page ) : ?>
+    <a href="?page=<?= $i ?>" style="font-weight: bold; color: red;"><?= $i; ?></a>
+    <?php else : ?>
+        <a href="?page=<?= $i ?>"><?= $i; ?></a>
+    <?php endif; ?>
+ <?php endfor; ?>
+
+ <?php if( $page < $jumlahHalaman ) : ?>
+<a href="?page=<?= $page + 1 ?>">&raquo;</a>
+<?php endif; ?>
 
 <div class="table-admin">
 <table border="1" cellpadding="10" cellspacing="0">

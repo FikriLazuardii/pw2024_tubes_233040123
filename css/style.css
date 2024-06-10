@@ -203,7 +203,7 @@ body p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('imageasset/hero1.png');
+  background-image: url('../imageasset/hero1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -323,7 +323,7 @@ body p {
 
 /* Langganan */
 .subscription-form {
-  background-image: url('imageasset/DanauToba.avif');
+  background-image: url('../imageasset/DanauToba.avif');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -496,7 +496,7 @@ body p {
 /* Banner */
 .banner {
   position: relative;
-  background-image: url('imageasset/aboutlogo.jpg'); /* Make sure the image is in the same directory or provide the correct path */
+  background-image: url('../imageasset/aboutlogo.jpg'); /* Make sure the image is in the same directory or provide the correct path */
   background-size: cover;
   background-position: center;
   width: 100%;
