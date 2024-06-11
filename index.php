@@ -8,6 +8,13 @@ if( !isset($_SESSION["login"]) ) {
 
 require 'functions.php';
 
+// ambil username dari sesi
+$username = $_SESSION['username'];
+
+// ambil data pengguna dari database
+$result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
+$user = mysqli_fetch_assoc($result);
+
 $inspirasi = query("SELECT * FROM inspirasi");
 
 // tombol cari ditekan
@@ -61,7 +68,7 @@ if( isset($_POST["cari"]) ) {
         <div class="sub-menu">
           <div class="user-info">
             <img class="dropdown-img" src="imageasset/user.png" alt="">
-            <h2>Fikri Lazuardi</h2>
+            <h2><?= htmlspecialchars($username); ?></h2>
           </div>
           <hr>
 
@@ -172,11 +179,6 @@ if( isset($_POST["cari"]) ) {
             <div class="footer-left">
                 <img src="imageasset/logotourism.png" alt="Wonderful Indonesia Logo" class="logo">
                 <div class="social-media">
-                    <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
-                    <a href="#"><img src="youtube_icon.png" alt="YouTube"></a>
-                    <a href="#"><img src="tiktok_icon.png" alt="TikTok"></a>
                 </div>
             </div>
             <div class="footer-right">

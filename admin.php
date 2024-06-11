@@ -54,14 +54,14 @@ if( isset($_POST["cari"]) ) {
 
 
     <form action="" method="post">
-        <input class="search-input" type="text" name="keyword" size="40" autofocus="" placeholder="masukan keyword pencarian" autocomplete="off">
-        <button class="search-button" type="submit" name="cari">Cari!</button>
+        <input class="search-input" type="text" name="keyword" size="40" autofocus="" placeholder="masukan keyword pencarian" autocomplete="off" id="keyword">
+        <button class="search-button" type="submit" name="cari" id="tombol-cari">Cari!</button>
     </form>
 <br>
 
 <!-- navigasi -->
-
-<?php if( $page > 1 ) : ?>
+ <div class="pagination">
+ <?php if( $page > 1 ) : ?>
 <a href="?page=<?= $page - 1?>">&laquo;</a>
 <?php endif; ?>
 
@@ -76,8 +76,11 @@ if( isset($_POST["cari"]) ) {
  <?php if( $page < $jumlahHalaman ) : ?>
 <a href="?page=<?= $page + 1 ?>">&raquo;</a>
 <?php endif; ?>
+ </div>
+<br>
 
-<div class="table-admin">
+
+<div class="table-admin" id="container">
 <table border="1" cellpadding="10" cellspacing="0">
 <thead>
 <tr>
@@ -111,6 +114,8 @@ if( isset($_POST["cari"]) ) {
 </tbody>
 </table>
 </div>
+
+<script src="js/ajax.js"></script>
 
 </body>
 </html>
