@@ -96,7 +96,7 @@ table>tbody>tr:hover {
     background-color: #3498db; /* Warna dasar tombol */
     color: white; /* Warna teks tombol */
     border: none; /* Hilangkan border */
-    padding: 15px 30px; /* Padding tombol */
+    padding: 10px 20px; /* Padding tombol */
     text-align: center; /* Posisikan teks di tengah */
     text-decoration: none; /* Hilangkan garis bawah */
     display: inline-block; /* Tampilkan sebagai blok sebaris */

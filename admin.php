@@ -46,7 +46,7 @@ if( isset($_POST["cari"]) ) {
 </head>
 <body>
     
-<h1>Tambah Destinasi</h1>
+<h1>Halaman Admin</h1>
 
 <a href="index.php"><button class="cool-button">Halaman Utama</button></a>
 <a href="tambah.php"><button class="cool-button">Tambah Destinasi</button></a>

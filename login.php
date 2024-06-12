@@ -9,7 +9,7 @@ if (isset($_SESSION["login"])) {
 
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
-    $gmail = $_POST["gmail"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
 
     $result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
@@ -56,13 +56,12 @@ if (isset($_POST["login"])) {
 
 </head>
 <body>
-    <?php if( isset($error) ) : ?>
-        <p style="color: red; font-style: italic;">username / password salah!!!</p>
-    <?php endif; ?>
-
     <div class="wrapper">
         <form action="" method="post">
             <h1>LOGIN</h1>
+            <?php if( isset($error) ) : ?>
+                <p class="warning">Username / Password Salah !!!</p>
+            <?php endif; ?>
             <div class="input-box">
                 <label for="username"></label>
                 <input type="text" placeholder="username" required name="username" id="username">

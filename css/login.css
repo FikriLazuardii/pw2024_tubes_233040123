@@ -15,6 +15,14 @@ body {
     background-position: center;
 }
 
+.warning {
+    text-align: center;
+    margin-top: 10px;
+    color: red;  /* Mengubah warna teks menjadi merah */
+    font-weight: 1000;  /* Membuat teks menjadi tebal */
+    font-style: italic;
+}
+
 .wrapper {
     width: 420px;
     background: transparent;

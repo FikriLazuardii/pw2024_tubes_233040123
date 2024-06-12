@@ -23,5 +23,3 @@ document.addEventListener("click", function (e) {
     searchFrom.classList.remove("active");
   }
 });
-
-// Hal Admin

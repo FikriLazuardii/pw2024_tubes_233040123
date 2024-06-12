@@ -570,6 +570,7 @@ footer {
 
 .logo {
   width: 200px;
+  margin-left: 30px;
 }
 
 .social-media {
@@ -588,7 +589,7 @@ footer {
 .footer-right p {
   font-size: 1.2em;
   color: #c7d800;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .footer-right select {
@@ -597,7 +598,7 @@ footer {
 }
 
 .footer-right nav {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .footer-right nav a {

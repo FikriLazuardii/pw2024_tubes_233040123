@@ -8,6 +8,9 @@ if( !isset($_SESSION["login"]) ) {
 
 require 'functions.php';
 
+// Ambil nilai peran pengguna dari sesi
+$role = $_SESSION['role'];
+
 // ambil username dari sesi
 $username = $_SESSION['username'];
 
@@ -28,7 +31,7 @@ if( isset($_POST["cari"]) ) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tourism</title>
+    <title>Tourism Indonesia</title>
 
     <!-- link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -185,6 +188,8 @@ if( isset($_POST["cari"]) ) {
                 <p>Kunjungi situs lainnya</p>
                 <select>
                     <option>Pilih Situs</option>
+                    <option>Pilih Situs</option>
+                    <option>Pilih Situs</option>
                 </select>
                 <nav>
                     <a href="#">Kebijakan Cookie</a>
@@ -204,6 +209,25 @@ if( isset($_POST["cari"]) ) {
 
     <!-- my java -->
     <script src="js/script.js"></script>
+
+    <script>
+        // Simpan nilai peran pengguna dalam variabel JavaScript
+        var role = "<?php echo $role; ?>";
+    </script>
+
+    <script>
+        // Tambahkan event listener untuk tombol "Halaman Admin"
+        document.getElementById('hal-admin').addEventListener('click', function() {
+            // Cek jika peran adalah admin
+            if (role === 'admin') {
+                // Redirect pengguna ke halaman admin.php
+                window.location.href = 'admin.php';
+            } else {
+                // Tampilkan pesan bahwa pengguna bukan admin
+                alert('Anda bukan admin !!!');
+            }
+        });
+    </script>
 
     <script>
       let subMenu = document.getElementById("subMenu");

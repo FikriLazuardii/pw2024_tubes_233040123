@@ -34,7 +34,9 @@ $user = mysqli_fetch_assoc($result);
     <div class="card">
       <img src="imageasset/profile.jpg" alt="" class="img">
       <h1 class="name">Hallo, <?= htmlspecialchars($username); ?></h1>
-      <p class="title"></p>
+      <p class="title">Selamat Datang di website Tourism Indonesia <br>
+       Website yang menunjukan berbagai Destinasi <br>
+       yang ada di Indonesia</p>
       <div class="desc">
         <p></p>
       </div>
