@@ -74,9 +74,9 @@ if( isset($_POST["cari"]) ) {
 
           <a href="profile.php" class="sub-menu-link">
             <img src="imageasset/user.png">
-            <p>Edit Profile</p>
+            <p>Profile</p>
           </a>
-          <a href="admin.php" class="sub-menu-link">
+          <a href="admin.php" class="sub-menu-link" id="hal-admin">
             <img src="imageasset/setting.png">
             <p>Halaman Admin</p>
           </a>

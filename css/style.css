@@ -112,10 +112,9 @@ body p {
   padding: 1rem;
 }
 
-.navbar .search-form button i {
+.navbar .search-form button {
   cursor: pointer;
-  font-size: 2rem;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
   color: var(--third);
 }
 

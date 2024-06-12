@@ -50,6 +50,7 @@ if( isset($_POST["cari"]) ) {
 
 <a href="index.php"><button class="cool-button">Halaman Utama</button></a>
 <a href="tambah.php"><button class="cool-button">Tambah Destinasi</button></a>
+<a href="print.php" target="_blank"><button class="cool-button">Print</button></a>
 <br><br>
 
 
@@ -95,7 +96,7 @@ if( isset($_POST["cari"]) ) {
 <?php $i = 1; ?>
 <?php foreach( $inspirasi as $row ) : ?>
 <tr>
-    <td><?php echo $i ?></td>
+    <td><?php echo $i; ?></td>
 
     <td><?php echo $row["judul"]?></td>
     <td><?php echo $row["konten"]?></td>
